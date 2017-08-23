@@ -161,7 +161,30 @@ void Lista<T>::insertarUltimo(T dato) {
  * @param pos posicion del nodo a eliminar
  */
 template<class T>
-void Lista<T>::remover(int pos) {}
+void Lista<T>::remover(int pos) {
+    nodo<T> *aux = inicio;
+    int count=0;
+
+    if (pos == 0){
+        if (inicio==NULL)
+            throw 1;
+
+        inicio = inicio->getNext();
+        delete aux;
+        return;
+    }
+
+    while (count < pos-1 && aux->getNext() != NULL){
+        count++;
+        aux=aux -> getNext();
+    }
+    if (aux->getNext() == NULL )
+        throw 1;
+
+    nodo<T> *tmp = aux->getNext();
+    aux->setNext(aux->getNext()->getNext());
+    delete tmp;
+}
 
 
 /**
