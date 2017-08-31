@@ -65,7 +65,16 @@ Lista<T>::Lista(const Lista<T> &li) {}
  * @tparam T
  */
 template<class T>
-Lista<T>::~Lista() {}
+Lista<T>::~Lista(){
+    nodo<T> *aux = inicio;
+    nodo<T> *ant = inicio;
+
+    while (aux != NULL){
+        ant = aux;
+        aux = aux->getNext();
+        delete ant;
+
+    }
 
 
 /**
