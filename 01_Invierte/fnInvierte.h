@@ -5,7 +5,7 @@
 
 class {
 private:
-    nodix<T> *inicio;
+    nodo<T> *inicio;
 public:
     void fnInvierte(Lista<T> *lis);
 
