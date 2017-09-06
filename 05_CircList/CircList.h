@@ -81,6 +81,7 @@ void CircList::remover() {
 T CircList::getDato() {
     if (puntero == NULL)
         throw 1;
+
     return puntero->getDato();
 
 }

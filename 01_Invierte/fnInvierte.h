@@ -1,4 +1,5 @@
 #include "../Lista/Lista.h"
+#include "../Lista/nodo.h"
 #ifndef FNINVIERTE_H
 #define FNINVIERTE_H
 
@@ -12,20 +13,23 @@ public:
 };
 
 void fnInvierte (Lista<T> *lis){
-    nodo<T> *aux = incio;
-    int *anterior, *siguiente;
 
-    unsigned int pos=0;
+    nodo<T> *aux = incio;
+    nodo<T> *anterior, *siguiente;
+
+    unsigned pos=0;
 
     while (siguente != NULL) {
 
         if (pos == 0) {
-            siguiente = aux->getNext();
-            aux = aux->setNext(NULL);
+
+            siguiente = aux->getNext(); //asigno el valor del siguiente nodo en "siguiente"
+            aux = aux->setNext(NULL); // seteo que apunte a null el primer valor para ser el ultimo
+
         } else {
-            anterior = aux;
+
+            anterior = aux; // guardo aux en anterior para poder obtener el siguiente y setear el siguiente
             aux = aux->getnext();
-            siguiente = aux;
 
             aux->setNext(anterior);
 
