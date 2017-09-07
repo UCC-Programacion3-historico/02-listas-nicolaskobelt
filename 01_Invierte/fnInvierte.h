@@ -14,7 +14,7 @@ public:
 
 void fnInvierte (Lista<T> *lis){
 
-    nodo<T> *aux = incio;
+    nodo<T> *aux = lis->getInicio();
     nodo<T> *anterior, *siguiente;
 
     unsigned pos=0;

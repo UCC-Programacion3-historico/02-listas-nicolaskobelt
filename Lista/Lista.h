@@ -37,6 +37,7 @@ public:
     void reemplazar(int pos, T dato);
 
     void vaciar();
+    nodo<T> *getInicio(){return inicio;}
 };
 
 
@@ -65,16 +66,17 @@ Lista<T>::Lista(const Lista<T> &li) {}
  * @tparam T
  */
 template<class T>
-Lista<T>::~Lista(){
+Lista<T>::~Lista() {
     nodo<T> *aux = inicio;
     nodo<T> *ant = inicio;
 
-    while (aux != NULL){
+    while (aux != NULL) {
         ant = aux;
         aux = aux->getNext();
         delete ant;
 
     }
+}
 
 
 /**
@@ -82,7 +84,7 @@ Lista<T>::~Lista(){
  * @tparam T
  * @return true si la lista esta vacia, sino false
  */
-template<class T>
+template <class T>
 bool Lista<T>::esVacia() {
     return inicio == NULL;
 }
@@ -205,7 +207,7 @@ void Lista<T>::remover(int pos) {
 template<class T>
 T Lista<T>::getDato(int pos) {
     unsigned i=0;
-    nodo *aux = inicio;
+    nodo<T> *aux = inicio;
 
     while (i < pos && aux != NULL){
         aux = aux->getNext();
@@ -227,7 +229,7 @@ T Lista<T>::getDato(int pos) {
 template<class T>
 void Lista<T>::reemplazar(int pos, T dato) {
     unsigned i=0;
-    nodo *aux = inicio;
+    nodo<T> *aux = inicio;
 
     while (i < pos && aux != NULL){
         aux = aux->getNext();
