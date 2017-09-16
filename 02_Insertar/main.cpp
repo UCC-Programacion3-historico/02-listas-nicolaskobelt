@@ -4,11 +4,12 @@ using namespace std;
 
 template <class T>
 int main() {
+
     int n,m;
 
     cout<<"programita para meter numeros"<<endl;
 
-    cout<<"Indicar posicion del dato: 1=principio, 2=diome, 3=final: ";
+    cout<<"Indicar posicion del dato: 1=principio, 2=medio, 3=final: ";
     cin>>n; cout<<endl;
 
     cout<<"Dato a ingresar: ";
@@ -21,7 +22,9 @@ int main() {
             listita.insertarPrimero(m);
             break;
         case 2:
-            listita.insertar(pos, m);
+            int tam = listita.getTamanio();
+            tam/2;
+            listita.insertar(tam, m);
             break;
         case 3:
             listita.insertarUltimo(m);

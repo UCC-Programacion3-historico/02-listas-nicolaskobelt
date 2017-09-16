@@ -9,7 +9,7 @@ add_subdirectory(test)
 set(SOURCE_FILES_01 01_Invierte/main.cpp Lista/Lista.h Lista/nodo.h)
 add_executable(01_Invierte ${SOURCE_FILES_01})
 
-set(SOURCE_FILES_02 02_Insertar/main.cpp 02_Insertar/insertar.h)
+set(SOURCE_FILES_02 02_Insertar/main.cpp)
 add_executable(02_Insertar ${SOURCE_FILES_02})
 
 set(SOURCE_FILES_03 03_Eliminar/main.cpp)
