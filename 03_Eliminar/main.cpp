@@ -16,15 +16,16 @@ int main() {
     //ingresar los datos
     int pos = 0;
     while (pos != n){
-        pos++;
 
         cout<<"Ingrese valor ["<<pos<<"]"<<endl;
         cin>>m;
 
-        if(pos==1)
+        if(pos==0)
             li.insertarPrimero(m);
         else
             li.insertar(pos,m);
+
+        pos++;
     }
 
     //mostrar los datos ingresados
